@@ -1,0 +1,113 @@
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+}
+
+body {
+    background: #ECEBEB;
+
+}
+
+.search-wrapper {
+    z-index: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition-property: top;
+    transition-duration: 350ms;
+    top: 50%;
+    left: 50%;
+   
+}
+
+.search-wrapper.close {
+    top: 45px;
+    transition-property: top;
+    transition-duration: 350ms;
+}
+
+.search-wrapper .input-holder .search-icon {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 0px;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-wrapper .close {
+    background: none;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+    transition-delay: 0.2s;
+}
+
+.ishiden {
+    visibility: hidden;
+}
+
+.gallery {
+    margin-top: 85px;
+    display: grid;
+    max-width: 1140px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 370px;
+    grid-gap: 12px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.gallery__link {
+    width: 370px;
+    height: 350px;
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__link:hover {
+    transform: scale(1.03);
+}
+
+.gallery__image {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.gallery__link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+    color: black;
+}
+
+.gallery__link:hover {
+    cursor: zoom-in;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
