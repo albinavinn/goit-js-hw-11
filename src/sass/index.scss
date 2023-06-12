@@ -1,0 +1,58 @@
+@import './common';
+
+body {
+  background-color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(148,187,233,1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.search-btn {
+  margin-left: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.photo-card {
+  width: 240px;
+  padding: 10px;
+  background: rgb(238,174,202);
+  background: linear-gradient(257deg, rgba(238,174,202,1) 26%, rgba(148,187,233,1) 60%);
+  margin: 10px;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.photo-card img {
+  width: 100%;
+}
+
+.info {
+  text-align: center;
+}
+
+.load-more {
+  margin: 10px auto;
+}
